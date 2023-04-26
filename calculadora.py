@@ -3,7 +3,7 @@ import time
 
 def inicio_calculadora():
 
- oper = int(input("bem vindo a calculadora da ingrid kk ,me ajude a matar o tédio e escolha que operaçao deseja realizar:\n 1 - soma \n| 2- divisão \n| 3- multiplicação \n| 4 - subtração \n| 5- potenciação\n" ))
+ oper = int(input("bem vindo a calculadora da ingrid kk ,me ajude a matar o tédio e escolha que operaçao deseja realizar:\n| 1 | - soma \n| 2 | - divisão \n| 3 | - multiplicação \n| 4 | - subtração \n| 5 | - potenciação\n| 6 | - Raiz\n" ))
 
  match oper:
 
@@ -53,29 +53,29 @@ def inicio_calculadora():
          time.sleep(1)
          print("\n --> O resultado da potenciação é:", pot ,"\n")
 
-     case 6 :    
-
-
+     case 6 :  #raiz 
+         grau = int(input("\nqual o grau da raiz que deseja calcular?"))  
+         time.sleep(1)
+         r1 = int(input("qual o valor deseja calcular a raiz?"))
+         raiz = r1 ** (1/grau)
+         time.sleep(1)
+         print("\no valor da raiz calculada é:",raiz)
 
 
         
-
-    
-         
-             
-
 inicio_calculadora()
 
 ret = True
 while ret:
 
-     opçao = int(input("deseja realizar outra operação? 1-Sim 2-Não"))
+     opçao = int(input("\ndeseja realizar outra operação? 1-Sim 2-Não"))
      if opçao == 2:
       ret = False
       print("obrigada por usar a calculadora!")    
      elif opçao == 1:
          inicio_calculadora()
      else:
+         time.sleep(1)
          print("digite uma opção válida") 
 
 
